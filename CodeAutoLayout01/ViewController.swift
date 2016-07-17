@@ -93,13 +93,14 @@ class ViewController: UIViewController {
 		
 		self.view.addConstraint(greenViewWidthConstraint)
 		
-		let blueTopConstraint = NSLayoutConstraint(item: blueView,
-		                                           attribute: NSLayoutAttribute.Top,
-		                                           relatedBy: NSLayoutRelation.Equal,
-		                                           toItem: self.view,
-		                                           attribute: NSLayoutAttribute.Top,
-		                                           multiplier: 1.0,
-		                                           constant: 88)
+		let blueTopConstraint = NSLayoutConstraint(
+			item: blueView,
+		    attribute: NSLayoutAttribute.Top,
+		    relatedBy: NSLayoutRelation.Equal,
+		    toItem: self.view,
+			attribute: NSLayoutAttribute.Top,
+		    multiplier: 1.0,
+		    constant: 88)
 		self.view.addConstraint(blueTopConstraint)
 		
 		let blueTrailingConstraint = NSLayoutConstraint(item: blueView, attribute: NSLayoutAttribute.Trailing,
