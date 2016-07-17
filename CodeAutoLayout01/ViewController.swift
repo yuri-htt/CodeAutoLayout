@@ -92,6 +92,43 @@ class ViewController: UIViewController {
 			//greenView.Width = self.view.Width * 0.4 + 0
 		
 		self.view.addConstraint(greenViewWidthConstraint)
+		
+		let blueTopConstraint = NSLayoutConstraint(item: blueView,
+		                                           attribute: NSLayoutAttribute.Top,
+		                                           relatedBy: NSLayoutRelation.Equal,
+		                                           toItem: self.view,
+		                                           attribute: NSLayoutAttribute.Top,
+		                                           multiplier: 1.0,
+		                                           constant: 88)
+		self.view.addConstraint(blueTopConstraint)
+		
+		let blueTrailingConstraint = NSLayoutConstraint(item: blueView, attribute: NSLayoutAttribute.Trailing,
+		                                                relatedBy: NSLayoutRelation.Equal,
+		                                                toItem: self.view,
+		                                                attribute: NSLayoutAttribute.Trailing,
+		                                                multiplier: 1.0,
+		                                                constant: -10)
+		self.view.addConstraint(blueTrailingConstraint)
+		
+		let blueWidthConstraint = NSLayoutConstraint(item: blueView,
+		                                             attribute: NSLayoutAttribute.Width,
+		                                             relatedBy: NSLayoutRelation.Equal,
+		                                             toItem: greenView,
+		                                             attribute: NSLayoutAttribute.Width,
+		                                             multiplier: 1.0,
+		                                             constant: 0)
+		self.view.addConstraint(blueWidthConstraint)
+		
+		let blueBottonConstraint = NSLayoutConstraint(item: blueView,
+		                                              attribute:	NSLayoutAttribute.Bottom,
+		                                              relatedBy: NSLayoutRelation.Equal,
+		                                              toItem: self.view,
+		                                              attribute: NSLayoutAttribute.Bottom,
+		                                              multiplier: 1.0,
+		                                              constant: -20)
+		
+		
+		self.view.addConstraint(blueBottonConstraint)
 	}
 
 }
